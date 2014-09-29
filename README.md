@@ -1,7 +1,7 @@
 boilerplate-static-node-server
 ==============================
 
-Just a simple static server for node JS
+Just a simple static server for node JS preloaded with FuelUX for your convenience
 
 1. Clone
 1. run `npm install`
