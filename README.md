@@ -1,4 +1,4 @@
-boilerplate-static-node-server
+fuelux-boilerplate-static-node-server
 ==============================
 
 Just a simple static server for node JS preloaded with FuelUX for your convenience
