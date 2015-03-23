@@ -16,15 +16,18 @@ While you *can* just clone this, I recommend pulling it into a new repo instead.
 
 #### Grunt
 This will bypass `app.js` and just use `connect` with `watch` to serve you static files from `www/`
+
 1. run `grunt`
 
 #### Nodemon
 This will start `app.js`, which will serve your static files from `www/`
+
 1. run `grunt app`
 1. browse to [http://localhost:9001/](http://localhost:9001/)
 
 #### Node
 This will start `app.js`, which will serve your static files from `www/`
+
 1. node app
 1. browse to [http://localhost:9001/](http://localhost:9001/)
 
