@@ -1,5 +1,4 @@
-module.exports = function(grunt) {
-
+module.exports = function (grunt) {
 	// Project configuration.
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
@@ -7,7 +6,7 @@ module.exports = function(grunt) {
 			options: {
 				banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
 			},
-			build: { /* simplest solution is just to minify in-place */
+			build: {/* simplest solution is just to minify in-place */
 				src: ['www/js/*.js', '!www/js/*.min.js'],
 				dest: 'www/js/main.min.js'
 			}
@@ -41,7 +40,16 @@ module.exports = function(grunt) {
 					port: 9001,
 					base: 'www',
 					hostname: '*',
-					open: true /* set to false to keep browser from opening project automatically */
+					open: true/* set to false to keep browser from opening project automatically */
+				}
+			}
+		},
+		nodemon: {
+			dev: {
+				script: 'app.js',
+				options: {
+					"ignore": ["node_modules"],
+					ext: 'js,handlebars,html'
 				}
 			}
 		},
@@ -59,8 +67,9 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-nodemon');
 
 	grunt.registerTask('compile', ['jshint', 'uglify', 'cssmin']);
 	grunt.registerTask('default', ['compile', 'connect:server', 'watch']);
-
+	grunt.registerTask('app', ['compile', 'nodemon']);
 };
