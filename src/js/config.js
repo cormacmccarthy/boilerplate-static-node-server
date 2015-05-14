@@ -1,17 +1,17 @@
 require.config({
+	baseUrl: '.',
 	config: {
 		moment: {
 			noGlobal: true
 		}
 	},
 	paths: {
-		jquery: 'bower_components/jquery-1.11.0/dist/jquery.min',
-		underscore: 'bower_componenets/underscore/underscore',
-		bootstrap: 'bower_components/bootstrap/dist/js/bootstrap.min',
-		fuelux: 'bower_components/fuelux/js',
-		moment: 'bower_components/moment/min/moment-with-langs.min', // comment out if you dont want momentjs to be default
-		underscore: 'bower_components/underscore/underscore',
-		requireLib: 'bower_components/requirejs/require',
+		jquery: 'vendor/jquery',
+		underscore: 'vendor/underscore',
+		bootstrap: 'vendor/bootstrap/js/bootstrap.min',
+		fuelux: 'vendor/fuelux/js',
+		moment: 'vendor/moment/min/moment-with-locales.min', // comment out if you dont want momentjs to be default
+		requireLib: 'vendor/require'
 	},
 	shim: { 'bootstrap': { deps: ['jquery'] } },
 	deps: ['js/router']//your app's entry point
